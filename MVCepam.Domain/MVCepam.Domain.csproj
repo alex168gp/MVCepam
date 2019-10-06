@@ -58,6 +58,7 @@
     <Compile Include="Models\Base Entities\BaseEntity.cs" />
     <Compile Include="Models\Interfaces\IArticle.cs" />
     <Compile Include="Models\Interfaces\IReview.cs" />
+    <Compile Include="Models\Review.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

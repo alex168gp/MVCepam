@@ -15,5 +15,7 @@ namespace MVCepam.Domain
         public BlogContentContext(string nameOrConnectionString) : base(nameOrConnectionString) { }
 
         public DbSet<Article> Articles { get; set; }
+
+        public DbSet<Review> Reviews { get; set; }
     }
 }

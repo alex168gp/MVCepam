@@ -3,16 +3,16 @@
     /// <summary>
     /// Information about reviews
     /// </summary>
-    public interface IReview
+    public class Review : BaseEntity, IReview
     {
         /// <summary>
         /// A name of a person that wrote review
         /// </summary>
-        string Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// The content of a review
         /// </summary>
-        string Text { get; set; }
+        public string Text { get; set; }
     }
 }
