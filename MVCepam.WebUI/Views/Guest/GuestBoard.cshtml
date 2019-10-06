@@ -14,7 +14,8 @@
         <h3>
             Написать отзыв
         </h3>
-        <form method="post">
+        @using (Html.BeginForm("GuestBoard", "Guest", FormMethod.Post))
+        { 
             <div class="form-group">
                 <input class="form-control" name="commentAuthorName" type="text" placeholder="Ваше имя" required />
                 <textarea class="form-control" name="commentText" placeholder="Текст отзыва" required></textarea>
@@ -22,5 +23,5 @@
             <button class="btn" type="submit">
                 Отправить
             </button>
-        </form>
+        }
     </section>

@@ -19,16 +19,15 @@ namespace MVCepam.Web.Controllers
         // GET: Guest
         public ActionResult GuestBoard()
         {
-
             return View(repository.Get());
         }
 
         [HttpPost]
         public ActionResult GuestBoard(string commentAuthorName, string commentText)
         {
-            ViewBag.Title = commentAuthorName;
-            ViewBag.Message = commentText;
-            return View();
+            repository.Insert(new Review() { Name = commentAuthorName, Text = commentText });
+            repository.Commit();
+            return View(repository.Get());
         }
     }
 }

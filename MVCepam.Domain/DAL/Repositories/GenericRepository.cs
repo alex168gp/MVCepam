@@ -69,5 +69,10 @@ namespace MVCepam.Domain
             dbSet.Attach(entityToUpdate);
             context.Entry(entityToUpdate).State = EntityState.Modified;
         }
+
+        public void Commit()
+        {
+            context.SaveChanges();
+        }
     }
 }
