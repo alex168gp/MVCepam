@@ -25,7 +25,7 @@ namespace MVCepam.Web.Controllers
         [HttpPost]
         public ActionResult GuestBoard(string commentAuthorName, string commentText)
         {
-            repository.Insert(new Review() { Name = commentAuthorName, Text = commentText });
+            repository.Insert(new Review() { Name = commentAuthorName, Text = commentText, PublishTime = DateTime.UtcNow });
             repository.Commit();
             return View(repository.Get());
         }

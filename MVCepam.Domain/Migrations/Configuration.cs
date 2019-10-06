@@ -1,4 +1,4 @@
-﻿namespace MVCepam.Domain
+﻿namespace MVCepam.Domain.Migrations
 {
     using System;
     using System.Collections.Generic;
@@ -41,7 +41,8 @@
                 new Review
                 {
                     Name = "First name",
-                    Text = "First review"
+                    Text = "First review",
+                    PublishTime = DateTime.UtcNow
                 },
                 new Review
                 {

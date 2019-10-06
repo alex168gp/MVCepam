@@ -1,0 +1,18 @@
+﻿namespace MVCepam.Domain.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class AddReviewPublishDate : DbMigration
+    {
+        public override void Up()
+        {
+            AlterColumn("dbo.Reviews", "PublishTime", c => c.DateTime(nullable: false, precision: 7, storeType: "datetime2"));
+        }
+        
+        public override void Down()
+        {
+            AlterColumn("dbo.Reviews", "PublishTime", c => c.DateTime(nullable: false));
+        }
+    }
+}
