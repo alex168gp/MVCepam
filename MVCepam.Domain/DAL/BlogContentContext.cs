@@ -9,7 +9,7 @@ namespace MVCepam.Domain
     {
         public BlogContentContext() : base("DefaultConnection")
         {
-            Database.SetInitializer(new BlogContentContextInitializer());
+            Database.SetInitializer<BlogContentContext>(null);
         }
 
         public BlogContentContext(string nameOrConnectionString) : base(nameOrConnectionString) { }

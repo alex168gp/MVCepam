@@ -52,12 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\BlogContentContext.cs" />
-    <Compile Include="DAL\BlogContentContextInitializer.cs" />
     <Compile Include="DAL\Repositories\GenericRepository.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Base Entities\BaseEntity.cs" />
     <Compile Include="Models\Interfaces\IArticle.cs" />
     <Compile Include="Models\Interfaces\IReview.cs" />
+    <Compile Include="Models\Interfaces\IQuestionnaire.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

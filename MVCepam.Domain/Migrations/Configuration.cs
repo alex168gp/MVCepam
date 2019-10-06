@@ -1,15 +1,25 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
-
-namespace MVCepam.Domain
+﻿namespace MVCepam.Domain
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public class BlogContentContextInitializer : CreateDatabaseIfNotExists<BlogContentContext>
+    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+
+    internal sealed class Configuration : DbMigrationsConfiguration<MVCepam.Domain.BlogContentContext>
     {
-        protected override void Seed(BlogContentContext context)
+        public Configuration()
         {
+            AutomaticMigrationsEnabled = false;
+        }
+
+        protected override void Seed(MVCepam.Domain.BlogContentContext context)
+        {
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
+            //  to avoid creating duplicate seed data.
+
             var articles = new List<Article>
             {
                 new Article
