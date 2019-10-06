@@ -8,10 +8,13 @@ namespace MVCepam.Web
     {
 
         private GenericRepository<Article> repository;
-
+        // TODO: move everything
+        private ArticleRepository rep;
         public HomeController()
         {
-            this.repository = new GenericRepository<Article>(new BlogContentContext());
+            var temp = new BlogContentContext();
+            this.repository = new GenericRepository<Article>(temp);
+            this.rep = new ArticleRepository(temp);
         }
 
         public ActionResult Index()
@@ -48,6 +51,7 @@ namespace MVCepam.Web
             ArticleViewModel articleViewModel = new ArticleViewModel();
             articleViewModel.Title = article.Title;
             articleViewModel.Text = article.Text;
+            articleViewModel.Tags = rep.GetTags(article.Id);
 
             return View(articleViewModel);
         }

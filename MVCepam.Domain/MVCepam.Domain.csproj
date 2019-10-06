@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\BlogContentContext.cs" />
+    <Compile Include="DAL\Repositories\ArticleRepository.cs" />
     <Compile Include="DAL\Repositories\GenericRepository.cs" />
     <Compile Include="Migrations\201910061832572_InitialCreate.cs" />
     <Compile Include="Migrations\201910061832572_InitialCreate.designer.cs">

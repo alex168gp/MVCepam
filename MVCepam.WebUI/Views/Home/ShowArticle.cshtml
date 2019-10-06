@@ -4,3 +4,9 @@
 <article>
     @Model.Text
 </article>
+<div class="container text-info">
+    @foreach (var tag in Model.Tags)
+    {
+        @tag.Name
+    }
+</div>
