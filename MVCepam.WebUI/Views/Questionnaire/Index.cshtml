@@ -1,0 +1,9 @@
+﻿<form class="form-group" method="post">
+    <div>First question</div>
+    @QuestionnaireHelpers.ShowCheckboxList(new List<string> { "1", "2", "5" }, "first")
+    <div>Second question</div>
+    @QuestionnaireHelpers.ShowRadioList(new List<string> { "1", "2", "3" }, "second")
+    <div>Third question</div>
+    <input type="text" name="third"/>
+    <button type="submit">Submit</button>
+</form>

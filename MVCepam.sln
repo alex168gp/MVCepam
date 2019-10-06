@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCepam.WebUI", "MVCepam.WebUI\MVCepam.WebUI.csproj", "{58636571-5D07-426B-B8EF-87885B772BA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCepam.Domain", "MVCepam.Domain\MVCepam.Domain.csproj", "{F4AFB526-64D8-4F0E-B6B8-6CDBE5FEA116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58636571-5D07-426B-B8EF-87885B772BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58636571-5D07-426B-B8EF-87885B772BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58636571-5D07-426B-B8EF-87885B772BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58636571-5D07-426B-B8EF-87885B772BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4AFB526-64D8-4F0E-B6B8-6CDBE5FEA116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4AFB526-64D8-4F0E-B6B8-6CDBE5FEA116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4AFB526-64D8-4F0E-B6B8-6CDBE5FEA116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4AFB526-64D8-4F0E-B6B8-6CDBE5FEA116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {800FF40B-9193-4524-89B6-10096513321F}
+	EndGlobalSection
+EndGlobal

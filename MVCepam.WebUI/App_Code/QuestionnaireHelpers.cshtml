@@ -1,0 +1,25 @@
+﻿@helper ShowCheckboxList(List<string> items, string elementName)
+{
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>
+                <input type="checkbox" id="@("C"+item)" name="@elementName" value="@item"/>
+                <label for="@("C"+item)">@item </label>
+            </li>
+        }
+    </ul>
+}
+
+@helper ShowRadioList(List<string> items, string elementName)
+{
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>
+                <input type="radio" id="@("R"+item)" name="@elementName" value="@item" />
+                <label for="@("R"+item)">@item </label>
+            </li>
+        }
+    </ul>
+}

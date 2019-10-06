@@ -1,0 +1,16 @@
+﻿@model ArticlesViewModel
+
+    <section>
+        @foreach (var article in Model.Articles)
+        {
+            <article>
+                <h3>@article.Title</h3>
+                <aside>@DateTime.UtcNow</aside>
+                <div class="tex">
+                    @article.Preview
+                </div>
+                @Html.ActionLink("Подробнее", "ShowArticle", new { article.Id })
+            </article>
+            <hr />
+        }
+    </section>

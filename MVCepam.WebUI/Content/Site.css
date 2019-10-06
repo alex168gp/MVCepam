@@ -1,0 +1,59 @@
+﻿#site-header {
+    background-color: whitesmoke;
+}
+
+#site-logo {
+    background-color: black;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+
+#site-title {
+    text-align: left;
+    margin: auto;
+    padding: 50px 0;
+}
+
+#site-footer {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.center-block {
+    width: 80%;
+}
+
+.navig {
+    background-color: ghostwhite;
+}
+
+.mainn {
+    min-height:100vh;
+    background-color: navajowhite;
+}
+
+.tex {
+    height: 80px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+#myBtn {
+    font-size: 18px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+textarea {
+    resize: vertical;
+}

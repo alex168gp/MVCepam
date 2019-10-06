@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header class="container-fluid" id="site-header">
+        <div class="col-md-2"></div>
+        <div class="col-md-1" id="site-logo"></div>
+        <h1 class="col-md-7 text-center">Title</h1>
+    </header>
+    <div class="row center-block navig">
+        <div class="col-md-2 col-md-push-10">
+            <nav class="container-fluid">
+                <ul class="nav navbar-nav text-center">
+                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Гостевая", "GuestBoard", "Guest")</li>
+                    <li>@Html.ActionLink("Анкета", "Index", "Questionnaire")</li>
+                </ul>
+            </nav>
+        </div>
+        <main class="col-md-10 col-md-pull-2">
+            <div class="mainn">
+                @RenderBody()
+            </div>
+        </main>
+
+    </div>
+
+    <footer class="container-fluid text-center">
+        <button class="btn" id="myBtn" onclick="topFunction()">Top</button>
+        <p>&copy; @DateTime.Now.Year - Copyright</p>
+    </footer>
+
+    <script src="~/Scripts/BackToTop.js">
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
