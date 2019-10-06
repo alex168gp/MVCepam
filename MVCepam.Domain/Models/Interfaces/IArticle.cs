@@ -1,4 +1,6 @@
-﻿namespace MVCepam.Domain
+﻿using System.Collections.Generic;
+
+namespace MVCepam.Domain
 {
     /// <summary>
     /// A model for a blog articles
@@ -21,5 +23,10 @@
         /// </summary>
         public DateTimeOffset PublicationTime { get; set; }
         */
+
+        /// <summary>
+        /// Tags of an article
+        /// </summary>
+        ICollection<Tag> Tags { get; set; }
     }
 }
