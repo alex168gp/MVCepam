@@ -22,7 +22,13 @@
                     <li>@Html.ActionLink("Анкета", "Index", "Questionnaire")</li>
                 </ul>
             </nav>
-            @QuestionnaireHelpers.ShowRadioList(new List<string> { "1", "2", "3" }, "Голосование")
+            @using (Html.BeginForm("Voting", "Home"))
+            {
+                <aside>Голосование</aside>
+                @QuestionnaireHelpers.ShowRadioList(new List<string> { "1", "2", "3" }, "Voting")
+                <input type="submit"/>
+            }
+            @ViewBag.Vote
         </div>
         <main class="col-md-10 col-md-pull-2">
             <div class="mainn">

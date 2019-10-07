@@ -19,5 +19,10 @@ namespace MVCepam.Domain
         public DbSet<Review> Reviews { get; set; }
 
         public DbSet<Tag> Tags { get; set; }
+
+        public DbSet<Poll> Polls { get; set; }
+
+        public DbSet<PollOption> PollOptions { get; set; }
+
     }
 }

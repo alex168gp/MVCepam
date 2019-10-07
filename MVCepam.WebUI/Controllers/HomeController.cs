@@ -7,18 +7,17 @@ namespace MVCepam.Web
     public class HomeController : Controller
     {
 
-        private GenericRepository<Article> repository;
-        // TODO: move everything
-        private ArticleRepository rep;
+        private ArticleRepository repository;
+
         public HomeController()
         {
             var temp = new BlogContentContext();
-            this.repository = new GenericRepository<Article>(temp);
-            this.rep = new ArticleRepository(temp);
+            this.repository = new ArticleRepository(temp);
         }
 
         public ActionResult Index()
         {
+
             var DBArticles = repository.Get();
             ArticlesViewModel articlesViewModel = new ArticlesViewModel();
 
@@ -51,9 +50,19 @@ namespace MVCepam.Web
             ArticleViewModel articleViewModel = new ArticleViewModel();
             articleViewModel.Title = article.Title;
             articleViewModel.Text = article.Text;
-            articleViewModel.Tags = rep.GetTags(article.Id);
+            articleViewModel.Tags = repository.GetTags(article.Id);
 
             return View(articleViewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Voting(string Voting)
+        {
+            using (BlogContentContext db = new BlogContentContext())
+            {
+                
+            }
+            return Redirect(Request.UrlReferrer.PathAndQuery);
         }
     }
 }

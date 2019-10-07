@@ -13,10 +13,10 @@
 
 @helper ShowRadioList(List<string> items, string elementName)
 {
-    <ul>
+    <ul class="list-group">
         @foreach (var item in items)
         {
-            <li>
+            <li class="list-unstyled">
                 <input type="radio" id="@("R"+item)" name="@elementName" value="@item" />
                 <label for="@("R"+item)">@item </label>
             </li>

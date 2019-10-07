@@ -74,11 +74,26 @@
                 }
             };
 
+            var pollOptions = new List<PollOption>
+            {
+                new PollOption
+                {
+                    Value = "1q",
+                },
+                new PollOption
+                {
+                    Value = "2q"
+                }
+            };
+
+            var poll = new Poll() { Question = "Voting!", Options = pollOptions };
 
 
             articles.ForEach(art => context.Articles.Add(art));
             reviews.ForEach(rev => context.Reviews.Add(rev));
             tags.ForEach(tag => context.Tags.Add(tag));
+            context.Polls.Add(poll);
+            pollOptions.ForEach(opt => context.PollOptions.Add(opt));
             context.SaveChanges();
         }
     }

@@ -66,13 +66,21 @@
     <Compile Include="Migrations\201910062000527_AddTags.designer.cs">
       <DependentUpon>201910062000527_AddTags.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910070317456_AddPolls.cs" />
+    <Compile Include="Migrations\201910070317456_AddPolls.designer.cs">
+      <DependentUpon>201910070317456_AddPolls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Base Entities\BaseEntity.cs" />
+    <Compile Include="Models\Interfaces\IPollQuestion.cs" />
     <Compile Include="Models\Interfaces\IArticle.cs" />
+    <Compile Include="Models\Interfaces\IPoll.cs" />
     <Compile Include="Models\Interfaces\IReview.cs" />
     <Compile Include="Models\Interfaces\IQuestionnaire.cs" />
     <Compile Include="Models\Interfaces\ITag.cs" />
+    <Compile Include="Models\PollQuestions.cs" />
+    <Compile Include="Models\Poll.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910062000527_AddTags.resx">
       <DependentUpon>201910062000527_AddTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910070317456_AddPolls.resx">
+      <DependentUpon>201910070317456_AddPolls.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
