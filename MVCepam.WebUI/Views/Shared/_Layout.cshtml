@@ -24,11 +24,10 @@
             </nav>
             @using (Html.BeginForm("Voting", "Home"))
             {
-                <aside>Голосование</aside>
-                @QuestionnaireHelpers.ShowRadioList(new List<string> { "1", "2", "3" }, "Voting")
+                <aside>@ViewBag.PollQuestion</aside>
+                @QuestionnaireHelpers.ShowRadioList(@ViewBag.PollOptions, "Voting")
                 <input type="submit"/>
             }
-            @ViewBag.Vote
         </div>
         <main class="col-md-10 col-md-pull-2">
             <div class="mainn">

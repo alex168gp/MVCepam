@@ -13,6 +13,11 @@ namespace MVCepam.Web
         {
             var temp = new BlogContentContext();
             this.repository = new ArticleRepository(temp);
+            using (BlogContentContext db = new BlogContentContext())
+            {
+                ViewBag.PollQuestion = db.Polls.FirstOrDefault(poll => poll.Id == 1).Question;
+                ViewBag.PollOptions = db.Polls.Where(poll => poll.Id == 1).SelectMany(poll => poll.Options).Select(options => options.Value).ToList();
+            }
         }
 
         public ActionResult Index()
@@ -60,7 +65,9 @@ namespace MVCepam.Web
         {
             using (BlogContentContext db = new BlogContentContext())
             {
-                
+                var option = db.PollOptions.FirstOrDefault(opt => opt.Value == Voting);
+                option.Votes++;
+                db.SaveChanges();
             }
             return Redirect(Request.UrlReferrer.PathAndQuery);
         }
